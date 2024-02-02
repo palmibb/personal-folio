@@ -1,0 +1,136 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    background: linear-gradient(320deg, #1098f7, #000000); /* Updated background gradient */
+    display: flex;
+    font-family: "Dosis", sans-serif;
+    font-display: swap;
+    height: inherit;
+    justify-content: center;
+}
+
+.wrapper {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(0, 0, 0, 0.75); /* Updated background color */
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #ffffff; /* Updated text color */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.30); /* Updated background color */
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    flex-basis: 400px;
+    height: 540px;
+    padding: 20px 35px;
+}
+
+.screen {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(0, 0, 0, 0.75); /* Updated background color */
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #ffffff; /* Updated text color */
+    font-size: 35px;
+    overflow: auto;
+    padding: 20px;
+    text-align: right;
+    width: 326px;
+}
+
+.calc-button-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0;
+}
+
+.calc-button {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(0, 0, 0, 0.75); /* Updated background color */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Updated border color */
+    border-radius: 16px;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.1); /* Updated shadow color */
+    color: #ffffff; /* Updated text color */
+    flex-basis: 20%;
+    font-family: inherit;
+    font-size: 24px;
+    height: 65px;
+}
+
+.calc-button:last-child {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(0, 0, 0, 0.75); /* Updated background color */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Updated border color */
+    border-radius: 16px;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.1); /* Updated shadow color */
+    color: #ffffff; /* Updated text color */
+    background: #1098f7; /* Updated background color */
+}
+
+.calc-button:last-child:hover {
+    background-color: inherit;
+    color: inherit;
+}
+
+.calc-button:hover {
+    background-color: inherit;
+}
+
+.calc-button:active {
+    background-color: #ffef78;
+}
+
+.double {
+    flex-basis: 47%;
+}
+
+.triple {
+    flex-basis: 73%;
+}
+
+/* ----------------------------------------------------------------------- */
+
+/* Define scrollbar width and color */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the entire scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #888; /* Color of the scrollbar handle */
+border-radius: 10px; /* Rounded corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #1098F7; /* Color of the scrollbar handle on hover */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: #4697d1; /* Color of the scrollbar track */
+}
+
+/* Track on hover */
+::-webkit-scrollbar-track:hover {
+background: #ccc; /* Color of the scrollbar track on hover */
+}
+
+  /* ----------------------------------------------------------------------- */

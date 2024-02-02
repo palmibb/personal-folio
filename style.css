@@ -91,6 +91,37 @@ nav .nav-links a.selected{
     transition: background 0.3s ease;
 }
 
+/* ----------------------------------------------------- */
+
+.details button, .details button a{
+    padding: 10px 30px;
+    background: #303f9f;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.details button a:link{
+    text-decoration: none;
+}
+
+.details button a:visited{
+    text-decoration: none;
+}
+
+.details button a:hover{
+    text-decoration: none;
+}
+
+.details button a:active{
+    text-decoration: none;
+}
+
+/* ----------------------------------------------------- */
+
 .main .info button:hover,
 .content .post-list .post-item .buttons button:hover{
     background: #1a237e;
