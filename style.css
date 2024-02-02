@@ -111,7 +111,7 @@ nav .nav-links a.selected{
 .recent .header{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     margin-bottom: 30px;
 }
 
@@ -124,6 +124,33 @@ nav .nav-links a.selected{
 .recent .header a{
     color: #303f9f;
 }
+
+.posts img{
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+}
+
+
+/* ------------------------------------------------------- */
+.posts .img-ul img{
+    margin-right: 20px;
+}
+
+
+.posts .img-ul{
+    display: flex;
+    align-items: center;
+}
+
+.bold-letter p{
+    font-weight: bold;
+}
+.bold-letter span{
+    font-weight: lighter;
+}
+
+/* ------------------------------------------------------- */
 
 .recent .posts{
     display: flex;
