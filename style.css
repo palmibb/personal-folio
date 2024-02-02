@@ -112,7 +112,7 @@ nav .nav-links a.selected{
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .recent .header h4,
@@ -134,7 +134,7 @@ nav .nav-links a.selected{
 
 /* ------------------------------------------------------- */
 .posts .img-ul img{
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 
@@ -504,7 +504,7 @@ footer p{
     }
 
     .recent{
-        padding: 40px 20px;
+        padding: 25px 10px;
     }
 
     .recent .posts .post-item{
