@@ -7,6 +7,19 @@
     font-family: 'Heebo', sans-serif;
 }
 
+/* -------------------------------- */
+
+body{
+    transition: background-color 0.5s;
+}
+  
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+/* -------------------------------- */
+
 a{
     text-decoration: none;
     color: #000;
@@ -20,7 +33,7 @@ img{
 
 nav{
     padding: 20px 148px;
-    background-color: #fff;
+    /* background-color: #fff; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -79,18 +92,6 @@ nav .nav-links a.selected{
     width: 100%;
 }
 
-.main .info button,
-.content .post-list .post-item .buttons button{
-    padding: 10px 30px;
-    background: #303f9f;
-    border: none;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
 /* ----------------------------------------------------- */
 
 .details button, .details button a{
@@ -122,11 +123,6 @@ nav .nav-links a.selected{
 
 /* ----------------------------------------------------- */
 
-.main .info button:hover,
-.content .post-list .post-item .buttons button:hover{
-    background: #1a237e;
-}
-
 .main img{
     width: 450px;
     height: 450px;
@@ -146,8 +142,7 @@ nav .nav-links a.selected{
     margin-bottom: 20px;
 }
 
-.recent .header h4,
-.separator h4{
+.recent .header h4{
     font-size: 20px;
     font-weight: 400;
 }
@@ -167,7 +162,6 @@ nav .nav-links a.selected{
 .posts .img-ul img{
     margin-right: 15px;
 }
-
 
 .posts .img-ul{
     display: flex;
@@ -195,42 +189,10 @@ nav .nav-links a.selected{
     border-radius: 25px;
 }
 
-.recent .posts .post-item h3,
-.content .post-list .post-item h3{
-    font-size: 26px;
-    margin-bottom: 18px;
-}
-
-.recent .posts .post-item .info,
-.content .post-list .post-item .info{
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.recent .posts .post-item .info h5,
-.content .post-list .post-item h5{
-    font-size: 18px;
-    font-weight: 400;
-}
-
 .recent .posts .post-item p{
     width: 400px;
 }
 
-.separator{
-    padding: 40px 148px 0;
-}
-
-.separator h4{
-    margin-bottom: 30px;
-}
-
-.featured{
-    padding: 40px 290px 0;
-}
-
-.featured .item,
 .works-list .item{
     display: flex;
     gap: 30px;
@@ -239,20 +201,17 @@ nav .nav-links a.selected{
     border-bottom: 2px solid #e0e0e0;
 }
 
-.featured .item img,
 .works-list .item img{
     width: 320px;
     height: 200px;
     border-radius: 6px;
 }
 
-.featured .item .details h3,
 .works-list .item h3{
     font-size: 30px;
     margin-bottom: 16px;
 }
 
-.featured .item .details .item-info,
 .works-list .item .details .item-info{
     display: flex;
     align-items: center;
@@ -260,7 +219,6 @@ nav .nav-links a.selected{
     margin-bottom: 20px;
 }
 
-.featured .item .details .item-info .year-badge,
 .works-list .item .details .item-info .year-badge,
 .content .work-info .year-badge{
     background-color: #303f9f;
@@ -271,13 +229,11 @@ nav .nav-links a.selected{
     font-weight: bold;
 }
 
-.featured .item .details .item-info h4,
 .works-list .item .details .item-info h4{
     color: #8695a4;
     font-size: 18px;
 }
 
-.featured .item .details p,
 .works-list .item .details p{
     width: 700px;
     text-align: justify;
@@ -323,19 +279,6 @@ footer p{
     align-items: center;
 }
 
-.content .work-info{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-    width: 970px;
-}
-
-.content .work-info .category{
-    color: #8695a4;
-    font-size: 18px;
-}
-
 .content>p{
     width: 970px;
     font-size: 15px;
@@ -354,73 +297,6 @@ footer p{
     width: 970px;
 }
 
-.content .post-list{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.content .post-list .post-item{
-    background-color: #dbedf2;
-    padding: 24px;
-    width: 960px;
-    border-radius: 10px;
-}
-
-.content .post-list .post-item .buttons{
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-}
-
-.content .post-list .post-item .buttons button{
-    font-size: 14px;
-    padding: 6px 20px;
-}
-
-.content .post-list .post-item .buttons i{
-    font-size: 22px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.content .post-list .post-item .buttons i:hover{
-    color: #303f9f;
-}
-
-.content .container{
-    background-color: #dbedf2;
-    padding: 30px;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    width: 970px;
-    border-radius: 20px;
-}
-
-.content .container img{
-    width: 300px;
-    height: 300px;
-    border-radius: 20px;
-}
-
-.content .container h2{
-    margin-bottom: 20px;
-    font-size: 30px;
-}
-
-.content .container .about>p{
-    text-align: justify;
-}
-
-.content .container .about .email{
-    font-weight: bold;
-    margin-top: 30px;
-    font-size: 14px;
-}
-
 @media screen and (max-width: 1400px) {
     
     nav{
@@ -433,11 +309,6 @@ footer p{
 
     .recent{
         padding: 60px;
-    }
-
-    .featured,
-    .separator{
-        padding: 40px 60px 0;
     }
 
     .page-title{
@@ -465,12 +336,6 @@ footer p{
         padding: 40px;
     }
 
-    .featured,
-    .separator{
-        padding: 40px 40px 0;
-    }
-
-    .featured .item .details p,
     .works-list .item .details p{
         width: 100%;
     }
@@ -479,29 +344,14 @@ footer p{
         padding: 80px 40px 20px;
     }
 
-    .content .work-info,
+    .content,
     .content>p,
     .content>img,
     .content>h1,
     .content>h2,
     .content>h3,
-    .content .post-list .post-item,
-    .content .container{
+    .content .post-item{
         width: 100%;
-    }
-
-    .content .container img{
-        width: 250px;
-        height: 250px;
-    }
-
-    .content .container h2{
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-
-    .content .container .about>p{
-        font-size: 14px;
     }
 
 }
@@ -529,11 +379,6 @@ footer p{
         font-size: 15px;
     }
 
-    .main .info button{
-        font-size: 15px;
-        padding: 8px 22px;
-    }
-
     .recent{
         padding: 25px 10px;
     }
@@ -542,69 +387,40 @@ footer p{
         width: 100%;
     }
 
-    .recent .posts .post-item h3,
-    .content .post-list .post-item h3{
-        font-size: 20px;
-    }
-
-    .recent .posts .post-item .info h5,
-    .content .post-list .post-item .info h5{
-        font-size: 14px;
-    }
-
     .recent .posts .post-item p{
         width: 100%;
         font-size: 14px;
     }
 
-    .featured,
-    .separator{
-        padding: 40px 20px 0;
-    }
-
-    .featured .item,
     .works-list .item{
         flex-direction: column;
         padding: 0 20px 30px;
     }
 
-    .featured .item img,
     .works-list .item img{
         width: 100%;
         height: auto;
     }
 
-    .featured .item .details h3,
     .works-list .details .item h3{
         font-size: 24px;
         margin-bottom: 12px;
     }
 
-    .featured .item .details .item-info .year-badge,
     .works-list .item .details .item-info .year-badge{
         font-size: 12px;
     }
 
-    .featured .item .details .item-info h4,
     .works-list .item .details .item-info h4{
         font-size: 15px;
     }
 
-    .featured .item .details p,
     .works-list .item .details p{
         font-size: 14px;
     }
 
     .content{
         padding: 30px 20px 60px;
-    }
-
-    .content .container h2{
-        font-size: 20px;
-    }
-
-    .content .container .about>p{
-        font-size: 13px;
     }
 
 }
@@ -647,14 +463,8 @@ footer p{
         border-radius: 50px;
     }
 
-    .recent .posts,
-    .content .container{
+    .recent .posts{
         flex-direction: column;
-    }
-
-    .content .container img{
-        width: 100%;
-        height: auto;
     }
 
 }
