@@ -28,14 +28,31 @@ document.querySelector('.scroll-link').addEventListener('click', function(event)
 
     requestAnimationFrame(animation);
 });
+// ----------------------------------- Scrolling-to--------------------------------------------
 
+document.addEventListener("DOMContentLoaded", function() {
+  const checkbox = document.getElementById('themeToggle');
+  
+  // Retrieve the theme state from local storage
+  const themeState = localStorage.getItem("themeState");
 
-const checkbox = document.getElementById('themeToggle');
-
-checkbox.addEventListener('change', function() {
-  if(this.checked) {
+  // If the theme state is true, check the checkbox and apply the theme
+  if (themeState === "true") {
+    checkbox.checked = true;
     document.body.classList.add('dark-theme');
-  } else {
-    document.body.classList.remove('dark-theme');
   }
+
+  // Add event listener to toggle the theme
+  checkbox.addEventListener('change', function() {
+    if (this.checked) {
+      document.body.classList.add('dark-theme');
+    } else {
+      document.body.classList.remove('dark-theme');
+    }
+    // Store the theme state in local storage
+    localStorage.setItem("themeState", this.checked);
+  });
 });
+
+
+// --------------------------------------------DarkTheme----------------------------------------------------
