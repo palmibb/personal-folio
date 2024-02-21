@@ -1,0 +1,47 @@
+body {
+    background-color: olive;
+  }
+  
+  /* Common properties for table */
+  table {
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Common properties for th and td */
+  th,
+  td {
+    font-size: 19px;
+    border: 2px solid #ddd;
+    padding: 20px;
+  }
+
+  td{
+    background-color: #ddd;
+  }
+  
+  /* Unique properties for th */
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  /* Additional styles for collapsed table */
+  .collapsed-table {
+    border-collapse: collapse;
+  }
+  
+  /* Additional styles for separate table */
+  .separate-table {
+    border-collapse: separate;
+    border-spacing: 5px; /* Space between cell borders */
+  }
+  
+  /* Additional styles for gray background */
+  table.gray-background {
+    background-color: lightgray;
+    margin: 15px auto; /* Adjusted margin for better alignment */
+    padding: 0; /* Reset padding to avoid inconsistency */
+  }

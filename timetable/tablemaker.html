@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Table Creator</title>
+<style>
+  /* CSS for styling the menu */
+  .menu {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* CSS for table */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  /* CSS for draggable items */
+  .draggable {
+    margin: 5px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    cursor: move;
+    touch-action: manipulation;
+  }
+</style>
+</head>
+<body>
+
+<div class="menu">
+  <div class="draggable" draggable="true" ondragstart="drag(event)" ontouchstart="drag(event)">Study</div>
+  <div class="draggable" draggable="true" ondragstart="drag(event)" ontouchstart="drag(event)">Study1</div>
+  <div class="draggable" draggable="true" ondragstart="drag(event)" ontouchstart="drag(event)">Study2</div>
+  <div class="draggable" draggable="true" ondragstart="drag(event)" ontouchstart="drag(event)">Study3</div>
+  <div class="draggable" draggable="true" ondragstart="drag(event)" ontouchstart="drag(event)">Study4</div>
+  <!-- Add more draggable items here -->
+</div>
+
+<div id="tableContainer">
+  <table id="timetable">
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- You can add rows here if needed -->
+    </tbody>
+  </table>
+</div>
+
+<script>
+  function createTable() {
+    // Get the table element
+    const table = document.getElementById("timetable");
+
+    // Create rows and cells based on predefined timetable structure
+    for (let i = 0; i < 8; i++) {
+      const row = table.insertRow();
+      for (let j = 0; j < 6; j++) {
+        const cell = row.insertCell();
+        if (j === 0) {
+          cell.textContent = `Time ${i + 1}`;
+        } else {
+          cell.setAttribute("ondrop", "drop(event)");
+          cell.setAttribute("ondragover", "allowDrop(event)");
+        }
+      }
+    }
+  }
+
+  function allowDrop(ev) {
+    ev.preventDefault();
+  }
+
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.textContent);
+  }
+
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    // Check if the cell is empty or not
+    if (ev.target.textContent.trim() === "") {
+      ev.target.textContent = data;
+    } else {
+      // If the cell is not empty, concatenate the dragged item with existing content
+      ev.target.textContent += ", " + data;
+    }
+  }
+  
+  // Call createTable function when the page loads
+  createTable();
+</script>
+
+</body>
+</html>
