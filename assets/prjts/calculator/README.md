@@ -1,37 +1,33 @@
-First PRJTS
+# Calculator
+This Calculator project is a simple web-based calculator application built using HTML, CSS, and JavaScript. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division.
 
-Calculator Project
+# Features
 
-Description: Developed a fully functional calculator web application using HTML, CSS, and JavaScript. 
-             The calculator performs basic arithmetic operations such as addition, subtraction, multiplication, and division,
-             providing a user-friendly interface for performing calculations.
+Basic Arithmetic Operations: Addition, subtraction, multiplication, and division.
+Clear Button (C): Resets the calculator to its initial state.
+Backspace Button (←): Deletes the last digit entered.
+Equals Button (=): Computes the result of the arithmetic expression entered.
+Responsive Design: The calculator is designed to adapt to various screen sizes.
 
-Key Features:
+# How it Works
 
-Implemented user interface elements using HTML and CSS to create a visually appealing design.
-Utilized JavaScript for the logic behind the calculator's operations, including handling user input and performing calculations.
-Implemented responsive design principles to ensure the calculator functions well on various screen sizes, from desktop to mobile devices.
-Included error handling to prevent invalid input and ensure accurate calculation results.
-Added keyboard support to enhance user experience, allowing users to input numbers and perform operations using keyboard shortcuts.
+The calculator operates on a simple principle of maintaining a running total and a buffer for user input. Here's a breakdown of its functionality:
 
-Technologies Used:
+buttonClick(value): Handles clicks on calculator buttons. It distinguishes between numerical input and symbolic input (e.g., operators) and updates the display accordingly.
 
-HTML5
-CSS3
-JavaScript
+handleSymbol(symbol): Handles symbolic inputs such as clear (C), backspace (←), equals (=), and basic arithmetic operators (+, −, ×, ÷).
 
-Demo: Link to live demo
+handleMath(symbol): Performs arithmetic operations when an operator is entered. It maintains the running total and updates the buffer accordingly.
 
-GitHub Repository: https://github.com/palmibb/cal
+flushOperation(intBuffer): Flushes the pending operation by applying the operator to the running total and the current buffer value.
 
-Screenshots:
+handleNumber(numberString): Handles numerical inputs. It updates the buffer with the entered digits.
 
-Screenshot 1 (Replace with actual screenshot link)
-Screenshot 2 (Replace with actual screenshot link)
+# Usage
+To use the calculator:
 
-Skills Demonstrated:
-
-Proficiency in front-end web development technologies, including HTML, CSS, and JavaScript.
-Ability to implement user interface elements and interactive features using web development frameworks and libraries.
-Understanding of responsive design principles and accessibility standards to create inclusive web applications.
-Experience with version control systems like Git for project collaboration and code management.
+Include the HTML, CSS, and JavaScript files in your project.
+Create an HTML element with the class "screen" to display the calculator's output.
+Add buttons for numerical digits, operators, clear (C), backspace (←), and equals (=).
+Initialize the calculator by calling the init() function.
+html

@@ -86,11 +86,3 @@ function init(){
 }
 
 init();
-
-// ----------------------------------------------------------------------------------
-
-window.addEventListener('load', function() {
-        if (window.innerWidth < 786) { // Adjust this threshold as needed
-            document.getElementById('mobile-warning').style.display = 'block';
-        }
-    });
